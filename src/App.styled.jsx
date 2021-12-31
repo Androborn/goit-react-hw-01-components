@@ -4,8 +4,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  min-height: calc(100vh - 2em);
-  padding-top: 2em;
+  min-height: calc(100vh - 2rem);
+  padding-top: 2rem;
 
   background-color: #e7ecf2;
 `;
