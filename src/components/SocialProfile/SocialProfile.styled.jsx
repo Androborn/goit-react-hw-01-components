@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Profile = styled.div`
   display: block;
   width: 25vw;
+  margin-bottom: 2rem;
   text-align: center;
   overflow: hidden;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 2px 1px rgba(34, 60, 80, 0.2);
-  margin-bottom: 2rem;
 `;
 
 export const Description = styled.div`

@@ -12,7 +12,7 @@ export default function FriendList({ friends }) {
     <Friends>
       {friends.map(friend => (
         <FriendsItem key={friend.id}>
-          <Status status={friend.isOnline}></Status>
+          <Status status={friend.isOnline} />
           <Avatar src={friend.avatar} alt="User avatar" />
           <Name>{friend.name}</Name>
         </FriendsItem>

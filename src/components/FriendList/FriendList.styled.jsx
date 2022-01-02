@@ -34,6 +34,5 @@ export const Avatar = styled.img`
 `;
 
 export const Name = styled.p`
-  margin-right: 1rem;
   font-size: 1.5rem;
 `;

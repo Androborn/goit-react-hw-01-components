@@ -5,6 +5,7 @@ export const StatSection = styled.section`
   text-align: center;
   display: block;
   overflow: hidden;
+  margin-bottom: 2rem;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 2px 1px rgba(34, 60, 80, 0.2);
 `;
