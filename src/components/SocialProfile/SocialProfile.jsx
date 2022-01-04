@@ -7,9 +7,7 @@ import {
   Tag,
   Location,
   Stats,
-  Followers,
-  Views,
-  Likes,
+  StatItem,
   Label,
   Quantity,
 } from './SocialProfile.styled';
@@ -31,18 +29,18 @@ export default function SocialProfile({
       </Description>
 
       <Stats>
-        <Followers>
+        <StatItem>
           <Label>Followers</Label>
           <Quantity>{stats.followers}</Quantity>
-        </Followers>
-        <Views>
+        </StatItem>
+        <StatItem>
           <Label>Views</Label>
           <Quantity>{stats.views}</Quantity>
-        </Views>
-        <Likes>
+        </StatItem>
+        <StatItem>
           <Label>Likes</Label>
           <Quantity>{stats.likes}</Quantity>
-        </Likes>
+        </StatItem>
       </Stats>
     </Profile>
   );

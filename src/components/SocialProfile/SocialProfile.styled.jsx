@@ -41,22 +41,18 @@ export const Stats = styled.ul`
   background-color: #f3f6f9;
 `;
 
-export const Followers = styled.li`
+export const StatItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-basis: calc(100% / 3);
   height: 5rem;
-  border-right: 1px solid #e4e9f0;
   background-color: #f3f6f9;
-`;
 
-export const Views = styled(Followers)``;
-
-export const Likes = styled(Followers)`
-  border: none;
+  &:not(:last-child) {
+    border-right: 1px solid #e4e9f0;
+  }
 `;
-// how to apply "not n-th child"?
 
 export const Label = styled.span`
   color: #768696;
