@@ -10,14 +10,16 @@ import friends from './database/friends';
 import transactions from './database/transactions';
 
 export default function App() {
+  const { username, tag, location, avatar, stats } = user;
+
   return (
     <Wrapper>
       <SocialProfile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
       />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />

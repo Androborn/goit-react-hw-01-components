@@ -15,13 +15,10 @@ export default function Statistics({ title, stats }) {
       {title && <Title>{title}</Title>}
 
       <Stats>
-        {stats.map(stat => (
-          <StatItem
-            key={stat.id}
-            style={{ backgroundColor: colorRandomizer() }}
-          >
-            <StatLabel>{stat.label}</StatLabel>
-            <StatNumber>{stat.percentage}%</StatNumber>
+        {stats.map(({ id, label, percentage }) => (
+          <StatItem key={id} style={{ backgroundColor: colorRandomizer() }}>
+            <StatLabel>{label}</StatLabel>
+            <StatNumber>{percentage}%</StatNumber>
           </StatItem>
         ))}
       </Stats>

@@ -25,12 +25,12 @@ export default function TransactionHistory({ items }) {
         </HeadRow>
       </TableHead>
       <TableBody>
-        {items.map((item, i) => (
-          <BodyRow key={item.id} even={(i + 1) % 2 !== 1}>
+        {items.map(({ id, type, amount, currency }, i) => (
+          <BodyRow key={id} even={(i + 1) % 2 !== 1}>
             <Number>{i + 1}</Number>
-            <Type>{item.type}</Type>
-            <Amount>{item.amount}</Amount>
-            <Currency>{item.currency}</Currency>
+            <Type>{type}</Type>
+            <Amount>{amount}</Amount>
+            <Currency>{currency}</Currency>
           </BodyRow>
         ))}
       </TableBody>

@@ -1,24 +1,18 @@
 import PropTypes from 'prop-types';
-import {
-  Friends,
-  FriendsItem,
-  Status,
-  Avatar,
-  Name,
-} from './FriendList.styled';
+import { Friends } from './FriendList.styled';
+
+import FriendsItem from '../FriendsItem/FriendsItem';
 
 export default function FriendList({ friends }) {
   return (
     <Friends>
-      {friends.map(friend => (
-        <FriendsItem key={friend.id}>
-          <Status status={friend.isOnline} />
-          <Avatar src={friend.avatar} alt="User avatar" />
-          <Name>{friend.name}</Name>
-        </FriendsItem>
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <FriendsItem key={id} isOnline={isOnline} avatar={avatar} name={name} />
       ))}
     </Friends>
   );
+  // pass as children is OK?
+  // return <Friends>{friends.map(friend => FriendsItem(friend))}</Friends>;
 }
 
 FriendList.propTypes = {
